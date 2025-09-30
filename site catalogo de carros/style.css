@@ -1,0 +1,44 @@
+.navbar {
+    list-style: none;      /* Remove os marcadores */
+    margin: 0;
+    padding: 0;
+    display: flex;         /* Deixa os itens em linha */
+    background-color:none;
+
+}
+
+.navbar li {
+    margin: 0;
+    padding-left: 0%;
+    
+    
+}
+
+.navbar a {
+    display: block;
+    padding: 14px 20px;
+    text-decoration: none;
+    color: rgb(104, 4, 79);
+    text-align:center;
+
+}
+
+.navbar a:hover {
+    background-color: #5555 ;
+
+}
+
+body {
+    background-image: url('img/recepção.jpg');
+    background-size: cover; /* Ajusta o tamanho da imagem */
+    background-repeat:repeat;/* Evita que a imagem se repita */
+    background-position: center center; /* Centraliza a imagem */
+}
+.p{
+    color: #e8608c; 
+    text-align: center; 
+}
+
+.p2{
+    
+}

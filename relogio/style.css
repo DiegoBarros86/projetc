@@ -1,0 +1,25 @@
+body {
+    background-color: #41fc08;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.clock {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 5rem;
+    color: #0f0; /* verde digital */
+    text-shadow: 0 0 10px #0f0;
+    background: #111111;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #0f0 inset, 0 0 30px #000; 
+}
+body {
+    background-image: url('img/istockphoto-2208124386-1024x1024.jpg');
+    background-size: cover; /* Ajusta o tamanho da imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-position: center center; /* Centraliza a imagem */
+}

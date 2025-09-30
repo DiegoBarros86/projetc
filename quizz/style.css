@@ -1,0 +1,39 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("pexels-markusspiske-1089440.jpg");
+    background-size: cover;
+    background-position: center;
+    }
+
+    .container {
+    background: rgb(102, 31, 196);
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(212, 28, 28, 0.2);
+    text-align: center;
+    }
+
+    .options button {
+    margin: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #e0e0e0;
+    transition: background-color 0.3s ease;
+    }
+
+    .options button:hover {
+    background-color: #11c43e;
+    }
+
+    #result {
+    margin-top: 20px;
+    font-weight: bold;
+    }
