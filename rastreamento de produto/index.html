@@ -7,11 +7,29 @@
     <link rel="stylesheet" href="stylo.css">
 </head>
 <body>
-    
-    <div class="divBusca">
-    <input type="text" class="txtBusca" placeholder="pesquisar..."/>
-    <a class=""
+    <div class="divResultado">
+        <h2>Resultado da Busca</h2>
+        <p id="resultadoTexto">Nenhum produto rastreado ainda.</p>
+    <div class="container">
+        <h1>Rastreador de Encomendas</h1>
+        <div class="divRastrear">
+            <input type="text" class="txtRastrear" placeholder="Digite o código de rastreio"/>
+            <button class="btnRastrear">Rastrear</button>
+        </div>
+        
+        <div class="divResultado">
+            <h2>Status da Encomenda</h2>
+            <p id="resultadoTexto">Aguardando código para iniciar o rastreio.</p>
+        </div>
     </div>
+    <div class="divRastrear">
+        <input type="text" class="txtRastrear" placeholder="Digite o ID do produto"/>
+        <button class="btnRastrear">Rastrear Produto</button>
+    </div>
+
+
+    <script src="script.js"></script>
+
     
 </body>
 </html>

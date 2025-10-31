@@ -1,4 +1,4 @@
-    function checkAnswer(button) {
+    function checkAnswer(button){
     const correctAnswer = "Hyper Text Markup Language";
     const result = document.getElementById("result");
 
@@ -9,4 +9,4 @@
         result.innerText = "❌ Resposta incorreta!";
         result.style.color = "red";
     }
-    }
+}

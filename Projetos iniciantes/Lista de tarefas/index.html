@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Lista de Tarefas</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <main class="container" role="main">
+            <h1>Lista de Tarefas</h1>
+            <p class="sub">Adicione suas tarefas, marque como concluídas e filtre por status. Tudo salvo no seu navegador.</p>
+
+            <form id="form" class="new-todo" aria-label="Adicionar nova tarefa">
+                <input id="newTodo" type="text" placeholder="O que você precisa fazer?" autocomplete="off" aria-label="Descrição da tarefa" />
+                <button id="addBtn" class="btn" type="submit">Adicionar</button>
+            </form>
+
+            <div class="controls">
+                <div class="filters" role="tablist" aria-label="Filtros de tarefas">
+                    <button data-filter="all" class="active" role="tab" aria-selected="true">Todas</button>
+                    <button data-filter="active" role="tab">Ativas</button>
+                    <button data-filter="completed" role="tab">Concluídas</button>
+                </div>
+                <div>
+                    <button id="clearCompleted" class="btn secondary">Limpar concluídas</button>
+                </div>
+            </div>
+
+            <ul id="list" class="todolist" aria-live="polite" aria-label="Lista de tarefas"></ul>
+
+            <footer class="small">
+                <span id="count">0 tarefas</span>
+                <span class="muted">Salvo localmente no navegador</span>
+            </footer>
+        </main>
+
+        <script src="app.js" defer></script>
+    </body>
+</html>

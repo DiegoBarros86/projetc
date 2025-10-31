@@ -1,0 +1,79 @@
+:root{
+    --bg: #f5f7fb;
+    --card: #ffffff;
+    --accent: #0b5ed7;
+    --muted: #6c757d;
+    --success: #198754;
+}
+
+*{box-sizing: border-box}
+body{
+    margin:0;
+    font-family: Inter, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    font-size: 14px; /* redução do tamanho base */
+    background: linear-gradient(180deg, #e9f7ef 0%, var(--bg) 100%);
+    color: #222;
+    -webkit-font-smoothing:antialiased;
+    padding: 24px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:100vh;
+}
+
+.container{
+    width:100%;
+    max-width:720px;
+    padding:12px;
+}
+
+.card{
+    background:var(--card);
+    border-radius:12px;
+    padding:18px;
+    box-shadow: 0 6px 18px rgba(10,20,40,0.06);
+}
+
+h1{font-size:1.35rem;margin:0 0 10px;color:var(--accent)}
+
+.controls .row{display:flex;gap:12px;align-items:center;margin-bottom:12px}
+.controls label{flex:1;text-align:left}
+.controls input[type="number"]{width:110px;padding:7px;border-radius:8px;border:1px solid #e6e9ee;font-size:0.95rem}
+
+.checkboxes{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:12px}
+.checkboxes label{display:inline-flex;gap:8px;align-items:center;padding:6px 10px;border-radius:8px;border:1px solid transparent}
+.checkboxes input{transform:scale(1.05)}
+
+.output{display:flex;gap:12px;align-items:center}
+.output input{flex:1;padding:8px;border-radius:8px;border:1px solid #e6e9ee;font-family:monospace;font-size:0.95rem}
+.buttons{display:flex;gap:8px}
+.buttons button{background:var(--accent);color:#fff;border:none;padding:6px 10px;border-radius:8px;cursor:pointer;font-size:0.95rem}
+.buttons button.secondary{background:#6c757d}
+.buttons button:active{transform:translateY(1px)}
+
+.hint{margin-top:10px;color:var(--muted);font-size:0.9rem}
+
+.strength{margin-top:10px;padding:10px}
+.strength-bar{background:#f1f3f5;border-radius:8px;overflow:hidden;height:10px}
+.strength-fill{height:100%;width:0%;background:linear-gradient(90deg,#e55353,#f0ad4e,#198754);transition:width 250ms ease,background 250ms ease}
+.strength label{display:block;font-size:0.85rem;color:var(--muted);margin-bottom:6px}
+
+/* Toasts */
+#toast-container{position:fixed;right:20px;bottom:20px;display:flex;flex-direction:column;gap:10px;z-index:9999}
+.toast{min-width:200px;padding:8px 12px;border-radius:10px;color:#fff;background:#333;box-shadow:0 6px 18px rgba(10,20,40,0.08);opacity:0;transform:translateY(6px);transition:all 220ms ease;font-size:0.9rem}
+.toast.visible{opacity:1;transform:translateY(0)}
+.toast.info{background:#556;}
+.toast.success{background:var(--success)}
+.toast.error{background:#e55353}
+
+
+@media (max-width:520px){
+    .controls .row{flex-direction:column;align-items:stretch}
+    .output{flex-direction:column}
+    .buttons{justify-content:space-between}
+}
+
+/* Pequena animação quando a senha é copiada (adicionada via classe JS, opcional) */
+.copied{animation: pulse 1s linear}
+@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.03)}100%{transform:scale(1)}}
+

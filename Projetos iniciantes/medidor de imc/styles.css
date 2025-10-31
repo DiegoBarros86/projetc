@@ -1,0 +1,152 @@
+:root {
+  --bg: #f4f6f8;
+  --card: #ffffff;
+  --primary: #2563eb;
+  --muted: #6b7280;
+  --success: #16a34a;
+  --danger: #ef4444;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Inter, 'Segoe UI', system-ui, Arial, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background: var(--bg);
+  color: #0f172a;
+}
+
+.container {
+  max-width: 720px;
+  margin: 24px auto;
+  padding: 16px;
+}
+
+h1 {
+  margin: 0 0 12px;
+  font-size: 1.6rem;
+}
+
+.card {
+  background: var(--card);
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(2, 6, 23, 0.06);
+  margin-bottom: 12px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+label {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+input[type='number'] {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #e6e9ef;
+  font-size: 1rem;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background: transparent;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background: var(--primary);
+  color: white;
+  border-color: transparent;
+}
+
+.error {
+  color: var(--danger);
+  min-height: 20px;
+}
+
+.resultado {
+  font-size: 1rem;
+}
+
+.resultado .valor {
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.resultado .faixa {
+  padding: 8px;
+  border-radius: 6px;
+  margin-top: 8px;
+  color: white;
+  display: inline-block;
+}
+
+.faixa.abaixo {
+  background: #6b7280;
+}
+
+.faixa.normal {
+  background: var(--success);
+}
+
+.faixa.sobrepeso {
+  background: #f59e0b;
+}
+
+.faixa.obesidade {
+  background: var(--danger);
+}
+
+.historico-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.historico-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.historico-list time {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+@media (min-width: 720px) {
+  .row {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+  }
+
+  label {
+    width: 140px;
+    margin-bottom: 0;
+  }
+
+  input[type='number'] {
+    flex: 1;
+  }
+}

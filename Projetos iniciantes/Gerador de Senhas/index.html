@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Gerador de senhas simples para iniciantes. Escolha o tamanho e os tipos de caracteres.">
+</head>
+<body>
+    <main class="container">
+        <h1>Gerador de Senhas</h1>
+
+        <section class="card controls">
+            <div class="row">
+                <label for="length">Comprimento</label>
+                <input id="length" type="number" min="4" max="64" value="12">
+            </div>
+
+            <div class="checkboxes">
+                <label><input id="lowercase" type="checkbox" checked> Letras minúsculas (a-z)</label>
+                <label><input id="uppercase" type="checkbox" checked> Letras maiúsculas (A-Z)</label>
+                <label><input id="numbers" type="checkbox" checked> Números (0-9)</label>
+                <label><input id="symbols" type="checkbox"> Símbolos (!@#$...)</label>
+            </div>
+
+            <div class="row output">
+                <input id="password" readonly placeholder="Sua senha aparecerá aqui">
+                <div class="buttons">
+                    <button id="generate">Gerar</button>
+                    <button id="copy">Copiar</button>
+                </div>
+            </div>
+
+            <!-- Indicador de força -->
+            <div class="strength card" aria-hidden="false">
+                <label for="password" style="display:block;margin-bottom:8px;color:var(--muted);font-size:0.95rem">Força da senha</label>
+                <div class="strength-bar" aria-hidden="true">
+                    <div id="strength-bar-fill" class="strength-fill" style="width:0%"></div>
+                </div>
+                <div id="strength-text" style="margin-top:8px;font-size:0.95rem;color:var(--muted)">—</div>
+            </div>
+
+            <p class="hint">Dica: use pelo menos 12 caracteres e combine letras, números e símbolos para mais segurança.</p>
+        </section>
+    </main>
+
+    <script src="stilo.js"></script>
+</body>
+</html>
